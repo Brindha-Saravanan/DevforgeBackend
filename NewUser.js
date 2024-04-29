@@ -43,7 +43,7 @@ app.use(bodyParser.urlencoded({
         try {
             const username = req.body.username;
             const email = req.body.email;
-            const url = 'mongodb://127.0.0.1:27017';
+            const url = 'mongodb+srv://brindhasara22:Brindha26@@cluster0.hr0fpyw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
             const client = new MongoClient(url);
             const database = 'Devforge';    
             await client.connect();
@@ -71,7 +71,7 @@ app.use(bodyParser.urlencoded({
             const { questionNumber } = req.body; // Destructure the questionNumber from the request body
             console.log("Fetching question number:", questionNumber);
         
-            const url = 'mongodb://127.0.0.1:27017';
+            const url = 'mongodb+srv://brindhasara22:Brindha26@@cluster0.hr0fpyw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
             const client = new MongoClient(url);
             const database = 'Devforge';
         
@@ -100,7 +100,7 @@ app.post("/login", async function(req, res){
     const { username, password } = req.body;
     // console.log(req.body)
     try {
-        const url = 'mongodb://127.0.0.1:27017';
+        const url = 'mongodb+srv://brindhasara22:Brindha26@@cluster0.hr0fpyw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
         const client = new MongoClient(url);
         const database = 'Devforge';
         await client.connect();
