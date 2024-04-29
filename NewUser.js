@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({
     extended:true
 }))
     app.post("/insertLogin", async function(req, res1) {
+        console.log("insert login API");
         try {
             const username = req.body.username;
             const password = req.body.password;
@@ -40,6 +41,7 @@ app.use(bodyParser.urlencoded({
     });
 
     app.post("/insertDetails", async function(req, res1) {
+        console.log("insert details API");
         try {
             const username = req.body.username;
             const email = req.body.email;
@@ -67,6 +69,7 @@ app.use(bodyParser.urlencoded({
     });
 
     app.post("/fetchques", async function(req, res) {
+        console.log("fetch ques API");
         try {
             const { questionNumber } = req.body; // Destructure the questionNumber from the request body
             console.log("Fetching question number:", questionNumber);
@@ -97,6 +100,7 @@ app.use(bodyParser.urlencoded({
 
 
 app.post("/login", async function(req, res){
+    console.log("insert login API");
     const { username, password } = req.body;
     // console.log(req.body)
     try {
