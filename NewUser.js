@@ -13,11 +13,12 @@ app.use(bodyParser.urlencoded({
             const username = req.body.username;
             const password = req.body.password;
     
-            const url = 'mongodb://127.0.0.1:27017';
+            const url = 'mongodb+srv://brindhasara22:Brindha26@@cluster0.hr0fpyw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
             const client = new MongoClient(url);
             const database = 'Devforge';
     
             await client.connect();
+            console.log("Connected to db");
             const db = client.db(database);
             
             const document = { username : username , password : password};
